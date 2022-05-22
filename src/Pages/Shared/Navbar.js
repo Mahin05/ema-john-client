@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link to="/login">Login</Link>}</li> */}
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-error-content text-white max-w-7xl mx-auto px-12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -29,7 +29,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">ISLAM TOOLS HOUSE</a>
+                <a className="btn btn-ghost normal-case text-xl">ISLAM'S TOOLS SHOP</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

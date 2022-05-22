@@ -1,0 +1,42 @@
+.tool{
+    margin-bottom: 10%;
+    background-color:white;
+    border-radius: 10px;
+}
+.item-name{
+    font-size: larger;
+    font-weight: 800;
+    color: darkred;
+}
+.item-price{
+    font-size:x-large;
+    color: rgb(0, 60, 255);
+}
+.qnty{
+    font-size: large;
+    font-weight: 600;
+    color: black;
+}
+.desc{
+    font-size:medium;
+    font-weight: 500;
+}
+.tag{
+    font-size: larger;
+    font-weight: 700;
+    color:darkblue;
+}
+.tool img{
+    margin-top: 10px;
+    margin-left: 10%;
+    height: 70%;
+    width: 80%;
+}
+.tool-btn-style{
+    background-color:rgb(223, 108, 26);
+    font-weight: 700;
+    border: none;
+}
+.tool-btn-style:hover{
+    background-color: rgba(139, 0, 0, 0.815);
+}

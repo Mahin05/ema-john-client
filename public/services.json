@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Hammer",
+    "image":"data:image/jpeg;base64,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",
+    "description":"Nice hammer",
+    "availableQuantity":5000,
+    "pricePerunit":30
+  },
+  {
+    "name": "Cosmetic Dentistry",
+    "price":100,
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ]
+  },
+  {
+    "name": "Teeth Cleaning",
+    "price":100,
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ]
+  },
+  {
+    "name": "Cavity Protection",
+    "price":100,
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ]
+  },
+  {
+    "name": "Pediatric Dental",
+    "price":100,
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ]
+  },
+  {
+    "name": "Oral Surgery",
+    "price":100,
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ]
+  }
+]
