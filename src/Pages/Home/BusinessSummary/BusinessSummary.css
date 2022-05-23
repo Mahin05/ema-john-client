@@ -1,0 +1,36 @@
+.bs-text-style{
+    margin-top: 10%;
+    color: dodgerblue;
+    font-weight: 800;
+}
+.bs-sum{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 10%;
+}
+.each-sum{
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 300%;
+    color:tomato;
+}
+
+@media only screen and (max-width:576px) {
+    .each-sum{
+        margin-right: 5%;
+        margin-left: 5%;
+        font-size: 100%;
+        color:tomato;
+    }
+    .h2-style{
+        font-size: 80%;
+    }
+    .font-a{
+        font-size: 170%;
+    }
+    .count-up{
+        font-size: 200%;
+    }
+}

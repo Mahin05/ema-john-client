@@ -24,8 +24,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto 0;
-    padding: 0 200px;
+    /* margin: auto 0;
+    padding: 0 200px; */
 }
 
 .mob-size {
@@ -53,13 +53,14 @@ img {
         width: 70%;
     }
 
-    .images {
-        width: 120%;
+    .images{
+        width: 40%;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
-        margin-left: 10%;
-        padding: 0 200px;
+        margin-left: 30%;
+        /* margin-right: 3%; */
+        /* padding: 0 200px; */
     }
 
 }
