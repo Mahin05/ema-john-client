@@ -6,7 +6,7 @@ import bannerImage from '../../assets/images/product-jpeg-500x500.jpg';
 
 const Banner = () => {
     return (
-        <div class="hero min-h-screen">
+        <div  style={{'margin-bottom':'15%'}}  className='max-w-7xl mx-auto px-12'>
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <img src={bannerImage} class="max-w-sm rounded-lg shadow-2xl" />
                 <div>

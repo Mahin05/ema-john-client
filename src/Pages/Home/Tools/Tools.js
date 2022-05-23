@@ -11,7 +11,7 @@ const Tools = () => {
             .then(data => setTools(data))
     }, [])
     return (
-        <div>
+        <div  className='max-w-7xl mx-auto px-12'>
             {/* {
                 tools.length === 0 ? <Loading></Loading> : ''
             } */}
