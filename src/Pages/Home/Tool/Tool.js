@@ -1,13 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Tool.css'
 
 
 const Tool = ({ tool }) => {
     const { _id, name, minimunOrderQuantity, availableQuantity, pricePerUnit, image, description } = tool;
-    // const navigate = useNavigate();
-    // const navigateToToolDetail = id => {
-    //     navigate(`/tool/${id}`);
-    // }
+    const navigate = useNavigate();
+    const navigateToToolDetail = id => {
+        navigate(`/purchase/${id}`);
+    }
     return (
         <div class="card w-50 bg-base-100 mx-5 my-5 shadow-xl">
             <figure class="px-10 pt-10">
@@ -20,7 +21,7 @@ const Tool = ({ tool }) => {
                 <h3>Avaialble Quanity: {availableQuantity} Pieces</h3>
                 <p>{description}</p>
                 <div class="card-actions">
-                    <button class="btn btn-primary">Buy Now</button>
+                    <button onClick={()=>navigateToToolDetail(_id)} class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>

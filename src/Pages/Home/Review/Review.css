@@ -1,0 +1,16 @@
+.one-review-card{
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+.review-p{
+    font-weight: 700;
+    font-size: 100%;
+    color: blue;
+}
+.review-awesome{
+    color: orangered;
+}
+.review-ratings{
+    font-weight:700;
+}
