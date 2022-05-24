@@ -5,6 +5,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 // import useToken from '../../hooks/useToken';
 import Loading from '../../../Shared/Loading';
+import useToken from '../../../../hooks/useToken';
 
 
 
@@ -22,15 +23,15 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    // const [token]  = useToken(user || gUser);
-    // useEffect( () =>{
-    //     if (token) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [token, from, navigate])
+    const [token]  = useToken(user || gUser);
+    useEffect( () =>{
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     let signInError;
-    if (user || gUser) {
+    if (user||gUser) {
         // console.log(user);
         navigate(from, { replace: true });
     }
