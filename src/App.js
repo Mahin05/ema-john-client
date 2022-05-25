@@ -17,6 +17,8 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Home/Login/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import Blogs from './Pages/Blogs/Blogs';
+import MyPortFolio from './Pages/MyPortFolio/MyPortFolio';
+import PageNotFound from './Pages/PageNotFound/PageNotFound';
 
 
 
@@ -29,7 +31,7 @@ function App() {
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
         <Route path='blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='portfolio' element={<Blogs></Blogs>}></Route>
+        <Route path='portfolio' element={<MyPortFolio></MyPortFolio>}></Route>
         <Route path='purchase/:toolId' element={<RequireAuth>
           <PurchasePage></PurchasePage>
         </RequireAuth>}></Route>
@@ -42,6 +44,7 @@ function App() {
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
