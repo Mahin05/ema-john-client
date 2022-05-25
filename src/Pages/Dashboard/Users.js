@@ -7,7 +7,12 @@ const Users = () => {
     // const {data: users} = useQuery('users', ()=>fetch('http://localhost:5000/user').then(res=>res.json()));
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/user')
+        fetch('http://localhost:5000/user', {
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])
@@ -29,9 +34,9 @@ const Users = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map(user=><UserRow
-                            key={user._id}
-                            user={user}
+                            users.map(user => <UserRow
+                                key={user._id}
+                                user={user}
                             ></UserRow>)
                         }
                     </tbody>
