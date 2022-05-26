@@ -34,10 +34,10 @@ const AddProduct = () => {
                 <label>Price(per unit)</label>
                 <input name="pricePerUnit"  {...register("pricePerUnit")} type="text" class="feedback-input"  placeholder="Price" />
                 <label>Quantity</label>
-                <input name="availableQuantity"  {...register("availableQuantity")} type="text" class="feedback-input" placeholder="Quantity" />
+                <input name="availableQuantity"  {...register("availableQuantity")} type="number" class="feedback-input" placeholder="Quantity" />
                 <label>Minimum Order Quantity</label>
                 <input name="minimunOrderQuantity"  {...register("minimunOrderQuantity")}  type="number" class="feedback-input" placeholder="Minimum order quantity" />
-                <label>Minimum Order Quantity</label>
+                <label>Image Link</label>
                 <input name="image"  {...register("image")}  type="text" class="feedback-input" placeholder="Input Image Url" />
                 <input className='purchase-submit' type="submit" value="Add" />
             </form>

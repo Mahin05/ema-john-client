@@ -34,9 +34,9 @@ const PurchasePage = () => {
     const [error, setError] = useState('');
     const handleMinimumQuantity = event => {
         console.log(event.target.value);
-        const minimumQuantity = event.target.value;
-        const databaseMinimumQuantity = tool.minimunOrderQuantity;
-        const databaseAvailableQuantity = tool.availableQuantity;
+        const minimumQuantity = parseInt(event.target.value);
+        const databaseMinimumQuantity = parseInt(tool.minimunOrderQuantity);
+        const databaseAvailableQuantity = parseInt(tool.availableQuantity);
         if (minimumQuantity < databaseMinimumQuantity || minimumQuantity === '') {
             // toast.error('Please select more then minimum order');
             setError('Please place your orders between available & minimum order quantity!', true);
@@ -74,83 +74,6 @@ const PurchasePage = () => {
         })
     }
 
-    const onSubmit = (data,event) => {
-        const toolName = event.target.toolName.value;
-        console.log(data);
-        const url = `http://localhost:5000/order`;
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data,toolName)
-        })
-            .then(res => res.json())
-            .then(result => {
-                toast('Item added successfully!!')
-                console.log(result);
-            })
-    }
-
-
-    // const handleDelivered = event => {
-    //     event.preventDefault()
-    //     console.log(event.target.value)
-    //     const { quantity, ...rest } = tool;
-    //     // const newQnty = parseInt(event.target.value);
-    //     const subQuantity = parseInt(tool.quantity) - 1;
-    //     if (subQuantity >= 0) {
-    //         const updatedQuantity = { quantity: subQuantity, ...rest };
-    //         console.log(quantity, rest);
-    //         console.log(updatedQuantity);
-    //         setTool(updatedQuantity);
-    //         // send data 
-    //         const url = `https://nameless-mesa-10052.herokuapp.com/inventory/${toolId}`
-    //         fetch(url, {
-    //             method: 'PUT',
-    //             headers: {
-    //                 'content-type': 'application/json'
-    //             },
-    //             body: JSON.stringify(updatedQuantity)
-    //         })
-    //             .then(res => res.json())
-    //             .then(result => {
-    //                 alert('Quantity Delivered Successfully!!')
-    //                 console.log(result);
-    //                 event.target.reset();
-    //             })
-    //     }
-    //     else {
-    //         alert('Stocked out!!')
-    //     }
-    // }
-    // const handleRestock = event => {
-    //     event.preventDefault()
-    //     console.log(event.target.value)
-    //     const { quantity, ...rest } = tool;
-    //     const newQuantity = parseInt(event.target.quantity.value);
-    //     const addedQuantity = parseInt(tool.quantity) + newQuantity;
-    //     const updatedQuantity = { quantity: addedQuantity, ...rest };
-    //     console.log(quantity, rest);
-    //     console.log(updatedQuantity);
-    //     setTool(updatedQuantity);
-    //     // send data 
-    //     const url = `https://nameless-mesa-10052.herokuapp.com/inventory/${toolId}`
-    //     fetch(url, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(updatedQuantity)
-    //     })
-    //         .then(res => res.json())
-    //         .then(result => {
-    //             alert('Quantity Added Successfully!!')
-    //             console.log(result);
-    //             event.target.reset();
-    //         })
-
-    // }
 
     return (
         <div>
@@ -170,7 +93,7 @@ const PurchasePage = () => {
                 <label>Available quantity</label>
                 <input name="availableQuantity" type="text" class="feedback-input" value={tool.availableQuantity} placeholder="Your Phone" readOnly />
                 <label>Your order quantity</label>
-                <input name="orderQuantity" {...register("orderQuantity")} onChange={handleMinimumQuantity} type="number" class="feedback-input" placeholder={tool.minimunOrderQuantity} />
+                <input name="orderQuantity" {...register("orderQuantity")} onChange={handleMinimumQuantity} type="text" class="feedback-input" placeholder={tool.minimunOrderQuantity} />
                 {error ? <input disabled className='purchase-submit' type="submit" value="Place Order" /> :
                     <input className='purchase-submit' type="submit" value="Place Order" />}
                 <div className='text-red-500 text-3xl my-5'>

@@ -70,7 +70,7 @@ const MyOrders = () => {
                                             <p>Transaction ID: <span class="text-success">{order.transactionId}</span></p>
                                             </div>}
                                     </td>
-                                    <td><button onClick={() => handleDelete(order._id)} class="btn btn-xs">Cancel</button></td>
+                                    <td>{(order.pricePerunit && !order.paid) && <button onClick={() => handleDelete(order._id)} class="btn btn-xs">Cancel</button>}</td>
                                 </tr>)
                         }
 

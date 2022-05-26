@@ -27,7 +27,7 @@ const Review = () => {
             <h2 className="text-2xl">Add a Review</h2>
             <form onSubmit={handleSubmit(onSubmit)}  className='purchase-form'>
             <label>Review</label>
-                <input {...register("review")} name="review" type="number" class="feedback-input" placeholder="Your Review" />
+                <input {...register("review")} name="review" type="text" class="feedback-input" placeholder="Your Review" />
                 <label>Description</label>
                 <textarea {...register("description")} className='purchase-textArea'  rows={2} name="description" class="feedback-input" placeholder="Your Feedback"></textarea>
                 <input className='purchase-submit' type="submit" value="Review" />

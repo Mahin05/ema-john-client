@@ -6,7 +6,7 @@ import './BusinessSummary.css'
 
 const BusinessSummary = () => {
     return (
-        <div>
+        <div className='summary'>
             <h1 className="text-3xl text-center bs-text-style">BUSINESS SUMMARY</h1>
         <div className='max-w-7xl mx-auto max-w-7xl mx-auto px-12 bs-sum'>
             <div className='text-center each-sum'>

@@ -33,27 +33,10 @@ const Profile = () => {
         })
     }
 
-    // const { register, handleSubmit } = useForm();
-    // const onSubmit = data => {
-    //     console.log(data);
-    //     const url = `http://localhost:5000/userInfo`;
-    //     fetch(url, {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //         .then(res => res.json())
-    //         .then(result => {
-    //             toast('Informations Added!');
-    //             console.log(result);
-    //         })
-    // }
     return (
         <div>
-            <h2 className="text-2xl">Profile</h2>
-            <Link to="/dashboard/editProfile/">Edit Profile</Link>
+            <h2 className="text-3xl">Profile</h2>
+            <h2 className="text-2xl">Add/Edit Your Profile</h2>
             <form onSubmit={addUserInfo}  className='purchase-form'>
                 <label>Name</label>
                 <input name="name" type="text" class="feedback-input" value={user.displayName} placeholder="Your Name" readOnly />

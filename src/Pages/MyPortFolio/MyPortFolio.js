@@ -16,9 +16,9 @@ const MyPortFolio = () => {
                 <li>MS Office</li>
                 </h1>
                 <h1 className="text-2xl">Projects: 
-                <li><a href='https://islams-vehicle-corporati-6cfe1.web.app/'>ISLAMS VEHICLE CORPORATION</a></li>
-                <li><a href='https://photographer-mahin-8c586.web.app/'>PHOTOGRAPHER MAHIN</a></li>
-                <li><a href='https://online-phone-shop.netlify.app/'>PHONE SHOP</a></li>
+                <li><a className='text-blue-400' href='https://islams-vehicle-corporati-6cfe1.web.app/'>ISLAMS VEHICLE CORPORATION</a></li>
+                <li><a className='text-blue-400' href='https://photographer-mahin-8c586.web.app/'>PHOTOGRAPHER MAHIN</a></li>
+                <li><a className='text-blue-400' href='https://online-phone-shop.netlify.app/'>PHONE SHOP</a></li>
                 </h1>
 
 
