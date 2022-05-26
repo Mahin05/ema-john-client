@@ -13,7 +13,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?email=${user.email}`, {
+            fetch(`https://infinite-island-68376.herokuapp.com/booking?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -27,7 +27,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`
+            const url = `https://infinite-island-68376.herokuapp.com/inventory/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

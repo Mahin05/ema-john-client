@@ -16,7 +16,7 @@ const PurchasePage = () => {
     // console.log(tool.name);
     // console.log(tool.minimunOrderQuantity);
     useEffect(() => {
-        const url = `http://localhost:5000/purchase/${toolId}`;
+        const url = `https://infinite-island-68376.herokuapp.com/purchase/${toolId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data))
@@ -60,7 +60,7 @@ const PurchasePage = () => {
             orderQuantity:event.target.orderQuantity.value,
             pricePerunit:event.target.pricePerunit.value
         }
-        fetch('http://localhost:5000/order',{
+        fetch('https://infinite-island-68376.herokuapp.com/order',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

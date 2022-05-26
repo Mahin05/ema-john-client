@@ -4,10 +4,10 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    // const {data: users} = useQuery('users', ()=>fetch('http://localhost:5000/user').then(res=>res.json()));
+    // const {data: users} = useQuery('users', ()=>fetch('https://infinite-island-68376.herokuapp.com/user').then(res=>res.json()));
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/user', {
+        fetch('https://infinite-island-68376.herokuapp.com/user', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

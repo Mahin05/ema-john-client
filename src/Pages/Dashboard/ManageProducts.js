@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const[deletingTools,setDeleteingTools] = useState(null);
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://infinite-island-68376.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/tool/${id}`
+            const url = `https://infinite-island-68376.herokuapp.com/tool/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
