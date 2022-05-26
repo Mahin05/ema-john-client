@@ -64,7 +64,11 @@ const MyOrders = () => {
                                     <td>{order.toolName}</td>
                                     <td>
                                         {(order.pricePerunit && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button class="btn btn-xs">Pay</button></Link>}
-                                        {(order.pricePerunit && order.paid) && <span class="text-success">Paid</span>}
+                                        {/* {(order.pricePerunit && order.paid) && <span class="text-success">Paid</span>} */}
+                                        {(order.pricePerunit && order.paid) && <div>
+                                            <p><span class="text-success">Paid</span></p>
+                                            <p>Transaction ID: <span class="text-success">{order.transactionId}</span></p>
+                                            </div>}
                                     </td>
                                     <td><button onClick={() => handleDelete(order._id)} class="btn btn-xs">Cancel</button></td>
                                 </tr>)
