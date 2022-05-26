@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`
+            const url = `http://localhost:5000/tool/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
