@@ -19,6 +19,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import Blogs from './Pages/Blogs/Blogs';
 import MyPortFolio from './Pages/MyPortFolio/MyPortFolio';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import Payment from './Pages/Dashboard/Payment';
 
 
 
@@ -40,7 +41,9 @@ function App() {
         </RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<Review></Review>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='profile' element={<Profile></Profile>}></Route>
+          <Route path='editProfile' element={<EditProfile></EditProfile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
         </Route>

@@ -7,41 +7,66 @@ import auth from '../../firebase.init';
 
 const Profile = () => {
     const [user] = useAuthState(auth);
-    const email = user.email;
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
-        console.log(data);
-        const url = `http://localhost:5000/userInfo/${email}`;
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
+    // const email = user.email;
+
+    const addUserInfo = event => {
+        event.preventDefault();
+        const informations = {
+            name:user.displayName,
+            email:user.email,
+            education:event.target.education.value,
+            address:event.target.address.value,
+            phone:event.target.phone.value,
+            linkedIn:event.target.linkedIn.value
+        }
+        fetch('http://localhost:5000/userInfo',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
             },
-            body: JSON.stringify(data)
+            body:JSON.stringify(informations)
         })
-            .then(res => res.json())
-            .then(result => {
-                toast('Informations Added!');
-                console.log(result);
-            })
+        .then(res => res.json())
+        .then(result => {
+            toast('Information added successfully!!')
+            console.log(result);
+        })
     }
+
+    // const { register, handleSubmit } = useForm();
+    // const onSubmit = data => {
+    //     console.log(data);
+    //     const url = `http://localhost:5000/userInfo`;
+    //     fetch(url, {
+    //         method: 'POST',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //         .then(res => res.json())
+    //         .then(result => {
+    //             toast('Informations Added!');
+    //             console.log(result);
+    //         })
+    // }
     return (
         <div>
             <h2 className="text-2xl">Profile</h2>
-            <Link to="/dashboard/edit/">Edit Profile</Link>
-            <form onSubmit={handleSubmit(onSubmit)} className='purchase-form'>
+            <Link to="/dashboard/editProfile/">Edit Profile</Link>
+            <form onSubmit={addUserInfo}  className='purchase-form'>
                 <label>Name</label>
                 <input name="name" type="text" class="feedback-input" value={user.displayName} placeholder="Your Name" readOnly />
                 <label>Email</label>
                 <input name="email" type="email" class="feedback-input" value={user.email} placeholder="Email" readOnly />
                 <label>Education</label>
-                <input {...register("education")} name="education" type="text" class="feedback-input" placeholder={user.education} />
+                <input  name="education" type="text" class="feedback-input" placeholder={user.education} />
                 <label>Description</label>
-                <textarea {...register("address")} className='purchase-textArea' rows={2} name="address" class="feedback-input" placeholder="Your Address"></textarea>
+                <textarea  className='purchase-textArea' rows={2} name="address" class="feedback-input" placeholder="Your Address"></textarea>
                 <label>Phone</label>
-                <input {...register("phone")} name="phone" type="number" class="feedback-input" placeholder="Your Phone Number" />
+                <input name="phone" type="number" class="feedback-input" placeholder="Your Phone Number" />
                 <label>Linked-In</label>
-                <input {...register("linkedIn")} name="linkedIn" type="text" class="feedback-input" placeholder="Your Linked-In Profile Link" />
+                <input  name="linkedIn" type="text" class="feedback-input" placeholder="Your Linked-In Profile Link" />
                 <input className='purchase-submit' type="submit" value="Submit" />
             </form>
         </div>

@@ -57,7 +57,8 @@ const PurchasePage = () => {
             phone:event.target.phone.value,
             address:event.target.address.value,
             toolName:event.target.toolName.value,
-            orderQuantity:event.target.orderQuantity.value
+            orderQuantity:event.target.orderQuantity.value,
+            pricePerunit:event.target.pricePerunit.value
         }
         fetch('http://localhost:5000/order',{
             method:'POST',

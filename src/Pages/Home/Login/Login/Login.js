@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
-import auth from '../../../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-// import useToken from '../../hooks/useToken';
-import Loading from '../../../Shared/Loading';
+import auth from '../../../../firebase.init';
 import useToken from '../../../../hooks/useToken';
+import Loading from '../../../Shared/Loading';
 
 
 
@@ -31,10 +30,10 @@ const Login = () => {
     }, [token, from, navigate])
 
     let signInError;
-    if (user||gUser) {
-        // console.log(user);
-        navigate(from, { replace: true });
-    }
+    // if (user || gUser) {
+    //     // console.log(user);
+    //     navigate(from, { replace: true });
+    // }
     if (loading || gLoading) {
         return <Loading></Loading>
     }
