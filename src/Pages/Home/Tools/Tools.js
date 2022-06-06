@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Tool from '../Tool/Tool';
+import Loading from '../../Shared/Loading'
 import './Tools.css'
 
 const Tools = () => {
@@ -12,11 +13,11 @@ const Tools = () => {
     }, [])
     return (
         <div  className='max-w-7xl mx-auto px-12'>
-            {/* {
-                tools.length === 0 ? <Loading></Loading> : ''
-            } */}
             <div id='tool'>
-                <h2 className='tools-title'>Tools</h2>
+                <h2 className='tools-title'>Tools</h2>        
+            {
+                tools.length === 0 ? <Loading></Loading> : ''
+            }
                 <div className="tools-container">
                     {
                         tools.map(tool => <Tool
